@@ -1,0 +1,53 @@
+{% set name = "xplot" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "cd00e36c493b029a5e36c8ba4444684282e4e5cbd15cded3b0bec61357b1601c" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xplot/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: true  # [win and py<35]
+  features:   # [win]
+    - vc14    # [win]
+
+requirements:
+  build:
+    - toolchain
+    - cmake
+  run:
+    - xeus >=0.8.0,<9.0
+    - cppzmq
+    - xtl >=0.3.4,<0.4
+    - xproperty >=0.4.1,<0.5
+    - xwidgets >=0.5.0,<0.6
+    
+test:
+  commands:
+    - test -d ${PREFIX}/include/xplot  # [unix]
+    - test -f ${PREFIX}/include/xplot/xmarks.hpp  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xplot/xplotConfig.cmake  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xplot/xplotConfigVersion.cmake  # [unix]
+    - if exist %LIBRARY_PREFIX%\include\xplot\xmarks.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\xplotConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\xplotConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+
+about:
+  home: http://quantstack.net/xplot
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'C++ implementation of the Jupyter Interactive widgets'
+  doc_url: http://xplot.readthedocs.io
+  dev_url: https://github.com/QuantStack/xplot
+
+extra:
+  recipe-maintainers:
+    - SylvainCorlay
+    - JohanMabille
