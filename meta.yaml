@@ -1,6 +1,6 @@
 {% set name = "xplot" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "cd00e36c493b029a5e36c8ba4444684282e4e5cbd15cded3b0bec61357b1601c" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "a82a03a88ebbb5c524d31fa95ee620926f0ff69abb6faa94f524a8427979d2be" %}
 
 package:
   name: {{ name|lower }}
@@ -25,8 +25,8 @@ requirements:
     - xeus >=0.8.0,<9.0
     - cppzmq
     - xtl >=0.3.4,<0.4
-    - xproperty >=0.4.1,<0.5
-    - xwidgets >=0.5.0,<0.6
+    - xproperty >=0.6.0,<0.7
+    - xwidgets >=0.6.0,<0.7
     
 test:
   commands:
