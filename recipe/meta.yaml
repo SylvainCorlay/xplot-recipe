@@ -23,14 +23,14 @@ requirements:
     - cmake
     - xtl >=0.3.6,<0.4
     - xproperty >=0.6.0,<0.7
-    - xwidgets >=0.6.0,<0.7
+    - xwidgets >=0.5.2,<0.6
     - xeus >=0.8.0,<9.0
   run:
     - xeus >=0.8.0,<9.0
     - cppzmq
     - xtl >=0.3.6,<0.4
     - xproperty >=0.6.0,<0.7
-    - xwidgets >=0.6.0,<0.7
+    - xwidgets >=0.5.2,<0.6
     
 test:
   commands:
