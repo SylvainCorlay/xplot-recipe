@@ -21,10 +21,14 @@ requirements:
   build:
     - toolchain
     - cmake
+    - xtl >=0.3.6,<0.4
+    - xproperty >=0.6.0,<0.7
+    - xwidgets >=0.6.0,<0.7
+    - xeus >=0.8.0,<9.0
   run:
     - xeus >=0.8.0,<9.0
     - cppzmq
-    - xtl >=0.3.4,<0.4
+    - xtl >=0.3.6,<0.4
     - xproperty >=0.6.0,<0.7
     - xwidgets >=0.6.0,<0.7
     
