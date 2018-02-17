@@ -23,10 +23,13 @@ requirements:
   build:
     - toolchain
     - cmake
+    - gcc-7             # [linux]
     - xeus >=0.10.1,<0.11
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
     - xwidgets >=0.7.1,<0.8
+    - clangdev          # [osx]
+    - libcxx            # [osx]
   run:
     - xeus >=0.10.1,<0.11
     - cppzmq >=4.2.2,<4.3
