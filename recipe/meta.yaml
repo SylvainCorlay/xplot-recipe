@@ -1,6 +1,6 @@
 {% set name = "xplot" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "11b11d68975811c5f1a34911a4648aa76167a44cb20c845948047da8eaefea3a" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "88e6331c6a644947ce5d80e7852cd0b016df8c4559a4b9492138074b6994868d" %}
 
 package:
   name: {{ name|lower }}
@@ -22,18 +22,18 @@ requirements:
     - toolchain
     - cmake
     - gcc-7             # [linux]
-    - xeus >=0.11.0,<0.12
+    - xeus >=0.12.0,<0.13
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.8.2,<0.9
+    - xwidgets >=0.9.0,<0.10
     - clangdev          # [osx]
     - libcxx            # [osx]
   run:
-    - xeus >=0.11.0,<0.12
+    - xeus >=0.12.0,<0.13
     - cppzmq >=4.2.2,<4.3
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.8.2,<0.9
+    - xwidgets >=0.9.0,<0.10
 
 test:
   commands:
@@ -50,7 +50,7 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'C++ implementation of the Jupyter Interactive widgets'
+  summary: 'C++ backend for the bqplot 2-D plotting library'
   doc_url: http://xplot.readthedocs.io
   dev_url: https://github.com/QuantStack/xplot
 
