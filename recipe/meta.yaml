@@ -1,6 +1,6 @@
 {% set name = "xplot" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "2e7eb5f17d5cdd1860ff3b0227f0df7ee5a28b5042046aa7f4b666ea78944f1a" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "d0249da5411f77f565d15fc296f597ed48ce8686a611434ec320838d5455f7b7" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
     - xeus >=0.13.0,<0.14
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.12.2,<0.13
+    - xwidgets >=0.13.0,<0.14
     - clangdev          # [osx]
     - libcxx            # [osx]
   run:
@@ -33,7 +33,7 @@ requirements:
     - cppzmq >=4.2.2,<4.3
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.12.2,<0.13
+    - xwidgets >=0.13.0,<0.14
 
 test:
   commands:
