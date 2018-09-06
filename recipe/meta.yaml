@@ -1,6 +1,6 @@
 {% set name = "xplot" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "d0249da5411f77f565d15fc296f597ed48ce8686a611434ec320838d5455f7b7" %}
+{% set version = "0.9.1" %}
+{% set sha256 = "523adea20b26818b7e5446868411855933045baba617c99fe9f0f0d08300f421" %}
 
 package:
   name: {{ name|lower }}
@@ -22,18 +22,18 @@ requirements:
     - toolchain
     - cmake
     - gcc-7             # [linux]
-    - xeus >=0.13.0,<0.14
+    - xeus >=0.14.1,<0.15
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.13.0,<0.14
+    - xwidgets >=0.13.1,<0.14
     - clangdev          # [osx]
     - libcxx            # [osx]
   run:
-    - xeus >=0.13.0,<0.14
-    - cppzmq >=4.2.2,<4.3
+    - xeus >=0.14.1,<0.15
+    - cppzmq 4.3.0
     - xtl >=0.4.0,<0.5
     - xproperty >=0.7.0,<0.8
-    - xwidgets >=0.13.0,<0.14
+    - xwidgets >=0.13.1,<0.14
 
 test:
   commands:
